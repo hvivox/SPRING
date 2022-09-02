@@ -3,6 +3,7 @@ package com.algaworks.algafood.infrastructure.repository;
 import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.EstadoRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,8 +16,8 @@ public class EstadoRepositoryImpl implements EstadoRepository {
     @PersistenceContext
     private EntityManager manager;
 
-    public List<Estado> listar(){
-        return manager.createQuery( "From Estado", Estado.class ).getResultList();
+    public List<Estado> listar() {
+        return manager.createQuery("From Estado", Estado.class).getResultList();
     }
 
     @Override
@@ -25,12 +26,15 @@ public class EstadoRepositoryImpl implements EstadoRepository {
     }
 
     @Override
+    @Transactional
     public Estado salvar(Estado estado) {
         return manager.merge(estado);
     }
 
     @Override
+    @Transactional
     public void remover(Estado estado) {
+        estado = buscar(estado.getId());
         manager.remove(estado);
     }
 

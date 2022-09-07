@@ -12,17 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/cozinhas")
 public class CozinhaController {
+
 
     @Autowired
     private CozinhaRepository cozinhaRepository;
 
 
     @GetMapping
-    public List<Cozinha> listar(){
+    public List<Cozinha> listar() {
+
         return cozinhaRepository.listar();
     }
+
 
 }

@@ -22,12 +22,17 @@ public class InclusaoCozinhaMain {
 		
 		Cozinha cozinha2 = new Cozinha();
 		cozinha2.setNome("Japonesa");
-		
+
+		Cozinha cozinha3 = new Cozinha();
+		cozinha3.setNome("Regional Manauara");
+
 		cozinha1 = cozinhaRepository.salvar(cozinha1);
 		cozinha2 = cozinhaRepository.salvar(cozinha2);
-		
+		cozinha3 = cozinhaRepository.salvar(cozinha3);
+
 		System.out.printf("%d - %s\n", cozinha1.getId(), cozinha1.getNome());
 		System.out.printf("%d - %s\n", cozinha2.getId(), cozinha2.getNome());
+		System.out.printf("%d - %s\n", cozinha3.getId(), cozinha3.getNome());
 	}
 	
 }

@@ -1,8 +1,8 @@
 package com.algaworks.algafood.api.controller;
 
-import com.algaworks.algafood.domain.model.Cozinha;
+
 import com.algaworks.algafood.domain.model.Estado;
-import com.algaworks.algafood.domain.repository.CozinhaRepository;
+
 import com.algaworks.algafood.domain.repository.EstadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,21 +13,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/estados")
+@RequestMapping("/Estados")
 public class EstadoController {
 
-	@Autowired
-	private EstadoRepository estadoRepository;
-	
-	@GetMapping
-	public List<Estado> listar() {
-		return estadoRepository.listar();
-	}
+    @Autowired
+    private EstadoRepository estadoRepository;
 
 
-	@GetMapping("/{estadoId}")
-	public Estado buscar(@PathVariable Long estadoId )
-	{
-		return estadoRepository.buscar(estadoId);
-	}
+    @GetMapping
+    public List<Estado> lista(){
+        return estadoRepository.listar();
+    }
+
+
+    @GetMapping("/{estadoId}")
+    public Estado buscar( @PathVariable Long idEstado ){
+        return estadoRepository.buscar(idEstado);
+    }
+
+
 }

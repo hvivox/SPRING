@@ -34,3 +34,4 @@ podem ser utilizadas para fazer testes na consulta e transações
   * Get, Post, Delete, Patch 
 * Nesta versão foi incluído os recursos de lista e buca
 de restaurantes
+* Implementação de classes de serviço restaurante, cidade, estado

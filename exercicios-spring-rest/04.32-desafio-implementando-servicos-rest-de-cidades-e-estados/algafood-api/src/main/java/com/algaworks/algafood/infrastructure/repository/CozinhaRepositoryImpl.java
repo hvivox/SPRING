@@ -34,17 +34,18 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 	public Cozinha salvar(Cozinha cozinha) {
 		return manager.merge(cozinha);
 	}
-	
+
 	@Transactional
 	@Override
-	public void remover(Long id) {
-		Cozinha cozinha = buscar(id);
-		
-		if (cozinha == null) {
+	public void remover( Long id){
+		Cozinha cozinha =buscar(id);
+		if(cozinha == null){
 			throw new EmptyResultDataAccessException(1);
 		}
-		
 		manager.remove(cozinha);
+
 	}
+
+
 
 }

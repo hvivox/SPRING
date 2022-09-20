@@ -29,9 +29,14 @@ necessário basta incluir as cargas necessárias
 * As classes que estão em com.algaworks.algafood.jpa
 podem ser utilizadas para fazer testes na consulta e transações
 
-## Implementações
-* CRUD complento dos dominios Cozinha
-  * Get, Post, Delete, Patch 
-* Nesta versão foi incluído os recursos de lista e buca
-de restaurantes
-* Implementação de classes de serviço restaurante, cidade, estado
+## Alterações no projeto
+```
+* Ajustar projeto para utilizar Spring Data JPA
+* Iniciar o dao generico
+```
+
+* Excluir as classes/respositorio de implementação que estão com JPA
+* Exclusão das classe de consulta: main\java\com\algaworks\algafood\jpa
+* Deixar apenas as interfaces
+  * cidade, estado, formaPagamento, Permissão e restaurante
+*Adaptar o sistema para spring data jpa

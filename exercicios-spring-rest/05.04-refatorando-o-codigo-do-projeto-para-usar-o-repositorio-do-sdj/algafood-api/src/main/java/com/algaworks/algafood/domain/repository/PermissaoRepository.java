@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PermissaoRepository  extends JpaRepository<Permissao, Long> {
-
+/*
 	List<Permissao> listar();
 	Permissao buscar(Long id);
 	Permissao salvar(Permissao permissao);
 	void remover(Permissao permissao);
-	
+	*/
 }

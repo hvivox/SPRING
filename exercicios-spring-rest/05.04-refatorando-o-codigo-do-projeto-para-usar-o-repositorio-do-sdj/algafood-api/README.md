@@ -39,4 +39,4 @@ podem ser utilizadas para fazer testes na consulta e transações
 * Exclusão das classe de consulta: main\java\com\algaworks\algafood\jpa
 * Deixar apenas as interfaces
   * cidade, estado, formaPagamento, Permissão e restaurante
-*Adaptar o sistema para spring data jpa
+* Alterar classes de controle

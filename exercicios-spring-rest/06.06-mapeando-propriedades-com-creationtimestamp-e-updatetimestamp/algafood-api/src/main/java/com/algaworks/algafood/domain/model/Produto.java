@@ -1,16 +1,27 @@
 package com.algaworks.algafood.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-@
+@Data
+@EqualsAndHashCode
 @Entity
 public class Produto {
-    @GeneratedValue
-    Long id;
+    @EqualsAndHashCode.Include
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
     String nome;
     String descricao;
     BigDecimal preco;
-    boolean ativo;
+    Boolean ativo;
+
+    @ManyToOne
+    @JoinColumn(name = "Restaurante_id", nullable = false)
+    Restaurante restaurante;
 }

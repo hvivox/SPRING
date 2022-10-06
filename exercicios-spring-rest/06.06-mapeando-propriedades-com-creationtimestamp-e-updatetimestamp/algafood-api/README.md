@@ -40,4 +40,7 @@ podem ser utilizadas para fazer testes na consulta e transações
 * Deixar apenas as interfaces
   * cidade, estado, formaPagamento, Permissão e restaurante
 * Alterar classes de controle
-* Mapeamento da classe produtos e mapeamento com restaurante
+* Mapeamento bidirecional entre produtos e restaurantes
+* ajuste respositorio restaurante para ignorar a listagem de produtos
+* Mapeamento das classes grupo e usuario
+* 
